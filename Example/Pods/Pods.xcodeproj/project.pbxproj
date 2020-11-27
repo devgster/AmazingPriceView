@@ -1,0 +1,787 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02729388257106B400215AAA /* AmazingPriceAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02729387257106B400215AAA /* AmazingPriceAnimationView.swift */; };
+		02729389257106B400215AAA /* AmazingPriceAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02729387257106B400215AAA /* AmazingPriceAnimationView.swift */; };
+		150C9B0224130CB9CF6D2EE15F67B919 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AF416E68C28BD1BE1D87DC541CEC02 /* ReplaceMe.swift */; };
+		292C325E20F2AD1549350A997373FB18 /* Pods-AmazingPriceView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A1BCD0B2A7F3299E4972CEC973F30 /* Pods-AmazingPriceView_Tests-dummy.m */; };
+		46B32F835A765CF7F495412030F1BFB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		49AEBCD3EEB4F2FF7FC03C4AFBEE2235 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		4E7DBB423FD3A075907E6DF88CF0052D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		67EBC1DDF836BA51FE3DFD62FD7ECBF9 /* Pods-AmazingPriceView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 465C8415789B049F14610BCC83BF58BE /* Pods-AmazingPriceView_Example-dummy.m */; };
+		6DF59ACADC8C0E97EAEC313151934E32 /* Pods-AmazingPriceView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D5B8EEEE3575E4F6566974AE0FACF3DA /* Pods-AmazingPriceView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		756515E5899400DD64EB8A9A8D09AE35 /* AmazingPriceView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F4C91DFED59679DFF345A080A5152F67 /* AmazingPriceView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79476A8255A4155C6503ED589B9C28EF /* Pods-AmazingPriceView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DE83F9586CDE470AFCDDFCC798085B8A /* Pods-AmazingPriceView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A38F1F59438053843C926564EAAEEC6 /* AmazingPriceView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB48FA2302048C376F506F510D89B52 /* AmazingPriceView-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A5D8DE8CFB1E6338384A057908F8BDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 672485374C1BB68D20552F594CF861D9;
+			remoteInfo = "Pods-AmazingPriceView_Example";
+		};
+		92E81182178C79FC3F8BD19FBB799BF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE1DBAFE403EB06C1C9CD38DDD0B3809;
+			remoteInfo = AmazingPriceView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02729387257106B400215AAA /* AmazingPriceAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AmazingPriceAnimationView.swift; path = AmazingPriceView/Classes/AmazingPriceAnimationView.swift; sourceTree = "<group>"; };
+		04C9582ADD16B39B0D30F771DDFC4914 /* Pods-AmazingPriceView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AmazingPriceView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		07412F66BBA9C5A8EB637C2AB21F5228 /* AmazingPriceView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AmazingPriceView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A84D4E9F3CB1620FDBB2D2043B500E8 /* Pods-AmazingPriceView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AmazingPriceView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2E2A1BCD0B2A7F3299E4972CEC973F30 /* Pods-AmazingPriceView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AmazingPriceView_Tests-dummy.m"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		465C8415789B049F14610BCC83BF58BE /* Pods-AmazingPriceView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AmazingPriceView_Example-dummy.m"; sourceTree = "<group>"; };
+		477FE85AFF29BDB057F68870F31781F5 /* Pods-AmazingPriceView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AmazingPriceView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		57AF416E68C28BD1BE1D87DC541CEC02 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = AmazingPriceView/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		684FC5677A5A0B2BFD6E788F3A024905 /* AmazingPriceView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AmazingPriceView.modulemap; sourceTree = "<group>"; };
+		6B3EA0AAA1927E526DC638FCC83FB0AE /* Pods-AmazingPriceView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AmazingPriceView_Example-Info.plist"; sourceTree = "<group>"; };
+		79948BA6C020632E7EE4548A3FF0A924 /* Pods-AmazingPriceView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AmazingPriceView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		7B8EE2808B85E6CAE6C26F5F3ECE0D3B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9AC1849D18B4BE22FE8E1872540F61DA /* Pods-AmazingPriceView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AmazingPriceView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C12F31E77B841968DE8C1900FD7466A /* AmazingPriceView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AmazingPriceView.debug.xcconfig; sourceTree = "<group>"; };
+		9D8ACFD8CAF4E80BC72AAF021CC98299 /* Pods-AmazingPriceView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AmazingPriceView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0F124EC7B023017D45C8EC8D021CAB9 /* Pods-AmazingPriceView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AmazingPriceView_Example-frameworks.sh"; sourceTree = "<group>"; };
+		A1819707E056C8A453D12B9B31503C53 /* AmazingPriceView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AmazingPriceView-prefix.pch"; sourceTree = "<group>"; };
+		A6A41719B900B1C8BCAA8796F14C55DB /* Pods-AmazingPriceView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AmazingPriceView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BBB48FA2302048C376F506F510D89B52 /* AmazingPriceView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AmazingPriceView-dummy.m"; sourceTree = "<group>"; };
+		BF56DEF5EBF186786D2D5CDBCBD3DE2F /* Pods-AmazingPriceView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AmazingPriceView_Tests.modulemap"; sourceTree = "<group>"; };
+		C7F7F8DF5380C0D27B2481851F675DA7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C82C32EDAA5BDDCA5B18EEF733E45B3A /* Pods_AmazingPriceView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmazingPriceView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE25E349921716651F27BAD168A642EF /* AmazingPriceView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AmazingPriceView-Info.plist"; sourceTree = "<group>"; };
+		D15B4CB91C68B56FD50828EFEDE5C6E8 /* AmazingPriceView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AmazingPriceView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D4C2544B053ED8D56C5FA3B97D0B2EA4 /* Pods_AmazingPriceView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmazingPriceView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B8EEEE3575E4F6566974AE0FACF3DA /* Pods-AmazingPriceView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AmazingPriceView_Example-umbrella.h"; sourceTree = "<group>"; };
+		D98A87EA5CBF89264A5AFF65C38E3AAF /* AmazingPriceView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AmazingPriceView.release.xcconfig; sourceTree = "<group>"; };
+		DE83F9586CDE470AFCDDFCC798085B8A /* Pods-AmazingPriceView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AmazingPriceView_Tests-umbrella.h"; sourceTree = "<group>"; };
+		E692A8370D24560E3422F9C55FEFE2E8 /* Pods-AmazingPriceView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AmazingPriceView_Example.modulemap"; sourceTree = "<group>"; };
+		EAFE26CD28B96BADED0283E51DE09275 /* Pods-AmazingPriceView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AmazingPriceView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		EBD8CF7371088B97CBF577DD9AC387BC /* Pods-AmazingPriceView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AmazingPriceView_Tests-Info.plist"; sourceTree = "<group>"; };
+		F4C91DFED59679DFF345A080A5152F67 /* AmazingPriceView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AmazingPriceView-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E2871045F507638530A4DCD65324F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49AEBCD3EEB4F2FF7FC03C4AFBEE2235 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A89C2D6310564E4F5C0C2EB6A5B45CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46B32F835A765CF7F495412030F1BFB5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86B42CBF1572330A477F2086FDB708A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E7DBB423FD3A075907E6DF88CF0052D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34FF29317043BEFA3E323B9874CA2029 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				684FC5677A5A0B2BFD6E788F3A024905 /* AmazingPriceView.modulemap */,
+				BBB48FA2302048C376F506F510D89B52 /* AmazingPriceView-dummy.m */,
+				CE25E349921716651F27BAD168A642EF /* AmazingPriceView-Info.plist */,
+				A1819707E056C8A453D12B9B31503C53 /* AmazingPriceView-prefix.pch */,
+				F4C91DFED59679DFF345A080A5152F67 /* AmazingPriceView-umbrella.h */,
+				9C12F31E77B841968DE8C1900FD7466A /* AmazingPriceView.debug.xcconfig */,
+				D98A87EA5CBF89264A5AFF65C38E3AAF /* AmazingPriceView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AmazingPriceView";
+			sourceTree = "<group>";
+		};
+		A27855402A99AE9A7A81A28801604738 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D614329ABB32457A1BE57D64811A4DFD /* Pods-AmazingPriceView_Example */,
+				F3A5417C72CC3B67BC80F9F369715BEB /* Pods-AmazingPriceView_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AEC8DA33CBA9475638EA944D90CC6A45 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D15B4CB91C68B56FD50828EFEDE5C6E8 /* AmazingPriceView.podspec */,
+				7B8EE2808B85E6CAE6C26F5F3ECE0D3B /* LICENSE */,
+				C7F7F8DF5380C0D27B2481851F675DA7 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C18113438C0901D9537E59A507737BBA /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D28F55480CD3FE62610783CAD6ED68C5 /* AmazingPriceView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				C18113438C0901D9537E59A507737BBA /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				E2AB79FE6C5C1FFDCCDFB2585E33A571 /* Products */,
+				A27855402A99AE9A7A81A28801604738 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D28F55480CD3FE62610783CAD6ED68C5 /* AmazingPriceView */ = {
+			isa = PBXGroup;
+			children = (
+				57AF416E68C28BD1BE1D87DC541CEC02 /* ReplaceMe.swift */,
+				AEC8DA33CBA9475638EA944D90CC6A45 /* Pod */,
+				34FF29317043BEFA3E323B9874CA2029 /* Support Files */,
+				02729387257106B400215AAA /* AmazingPriceAnimationView.swift */,
+			);
+			name = AmazingPriceView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		D614329ABB32457A1BE57D64811A4DFD /* Pods-AmazingPriceView_Example */ = {
+			isa = PBXGroup;
+			children = (
+				E692A8370D24560E3422F9C55FEFE2E8 /* Pods-AmazingPriceView_Example.modulemap */,
+				A6A41719B900B1C8BCAA8796F14C55DB /* Pods-AmazingPriceView_Example-acknowledgements.markdown */,
+				79948BA6C020632E7EE4548A3FF0A924 /* Pods-AmazingPriceView_Example-acknowledgements.plist */,
+				465C8415789B049F14610BCC83BF58BE /* Pods-AmazingPriceView_Example-dummy.m */,
+				A0F124EC7B023017D45C8EC8D021CAB9 /* Pods-AmazingPriceView_Example-frameworks.sh */,
+				6B3EA0AAA1927E526DC638FCC83FB0AE /* Pods-AmazingPriceView_Example-Info.plist */,
+				D5B8EEEE3575E4F6566974AE0FACF3DA /* Pods-AmazingPriceView_Example-umbrella.h */,
+				9D8ACFD8CAF4E80BC72AAF021CC98299 /* Pods-AmazingPriceView_Example.debug.xcconfig */,
+				04C9582ADD16B39B0D30F771DDFC4914 /* Pods-AmazingPriceView_Example.release.xcconfig */,
+			);
+			name = "Pods-AmazingPriceView_Example";
+			path = "Target Support Files/Pods-AmazingPriceView_Example";
+			sourceTree = "<group>";
+		};
+		E2AB79FE6C5C1FFDCCDFB2585E33A571 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07412F66BBA9C5A8EB637C2AB21F5228 /* AmazingPriceView.framework */,
+				C82C32EDAA5BDDCA5B18EEF733E45B3A /* Pods_AmazingPriceView_Example.framework */,
+				D4C2544B053ED8D56C5FA3B97D0B2EA4 /* Pods_AmazingPriceView_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3A5417C72CC3B67BC80F9F369715BEB /* Pods-AmazingPriceView_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BF56DEF5EBF186786D2D5CDBCBD3DE2F /* Pods-AmazingPriceView_Tests.modulemap */,
+				2A84D4E9F3CB1620FDBB2D2043B500E8 /* Pods-AmazingPriceView_Tests-acknowledgements.markdown */,
+				477FE85AFF29BDB057F68870F31781F5 /* Pods-AmazingPriceView_Tests-acknowledgements.plist */,
+				2E2A1BCD0B2A7F3299E4972CEC973F30 /* Pods-AmazingPriceView_Tests-dummy.m */,
+				EBD8CF7371088B97CBF577DD9AC387BC /* Pods-AmazingPriceView_Tests-Info.plist */,
+				DE83F9586CDE470AFCDDFCC798085B8A /* Pods-AmazingPriceView_Tests-umbrella.h */,
+				9AC1849D18B4BE22FE8E1872540F61DA /* Pods-AmazingPriceView_Tests.debug.xcconfig */,
+				EAFE26CD28B96BADED0283E51DE09275 /* Pods-AmazingPriceView_Tests.release.xcconfig */,
+			);
+			name = "Pods-AmazingPriceView_Tests";
+			path = "Target Support Files/Pods-AmazingPriceView_Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		59BEDB1A4593FB6CC6DF4FF637ACF600 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79476A8255A4155C6503ED589B9C28EF /* Pods-AmazingPriceView_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		869A96E1F649DE24355D2894F59AA900 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				756515E5899400DD64EB8A9A8D09AE35 /* AmazingPriceView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE6333D7E83A7B58C3B999DB54DC4DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DF59ACADC8C0E97EAEC313151934E32 /* Pods-AmazingPriceView_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		672485374C1BB68D20552F594CF861D9 /* Pods-AmazingPriceView_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67312223DB69FD184AC57F7B6020A331 /* Build configuration list for PBXNativeTarget "Pods-AmazingPriceView_Example" */;
+			buildPhases = (
+				FFE6333D7E83A7B58C3B999DB54DC4DF /* Headers */,
+				B45C46CA66660726A6EFE44B9252C6AA /* Sources */,
+				86B42CBF1572330A477F2086FDB708A4 /* Frameworks */,
+				CAC03C77E1647B9E103B136A99E72F4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36BF3D551A5F6E3DC88512880D055ACF /* PBXTargetDependency */,
+			);
+			name = "Pods-AmazingPriceView_Example";
+			productName = "Pods-AmazingPriceView_Example";
+			productReference = C82C32EDAA5BDDCA5B18EEF733E45B3A /* Pods_AmazingPriceView_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CE1DBAFE403EB06C1C9CD38DDD0B3809 /* AmazingPriceView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BF3A25E8F71B8FA9F9A2C1FFDD36087 /* Build configuration list for PBXNativeTarget "AmazingPriceView" */;
+			buildPhases = (
+				869A96E1F649DE24355D2894F59AA900 /* Headers */,
+				B61A551815265778CE8E01CD0846E890 /* Sources */,
+				4A89C2D6310564E4F5C0C2EB6A5B45CF /* Frameworks */,
+				8CC8842EAD320A4CBD28B14B90C6983F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AmazingPriceView;
+			productName = AmazingPriceView;
+			productReference = 07412F66BBA9C5A8EB637C2AB21F5228 /* AmazingPriceView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EFE2C9B365253B5FF4A9AA9D7F088C3B /* Pods-AmazingPriceView_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 415A7FDC161F44FF5ED913392FBF5031 /* Build configuration list for PBXNativeTarget "Pods-AmazingPriceView_Tests" */;
+			buildPhases = (
+				59BEDB1A4593FB6CC6DF4FF637ACF600 /* Headers */,
+				F3A821BDB14492AC3CA1A3DA825F4FB9 /* Sources */,
+				3E2871045F507638530A4DCD65324F12 /* Frameworks */,
+				3CFC9DA4BEC376A857F506BA55BC6382 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D9A5CFA23EE34087D46326FCAB4BC5F /* PBXTargetDependency */,
+			);
+			name = "Pods-AmazingPriceView_Tests";
+			productName = "Pods-AmazingPriceView_Tests";
+			productReference = D4C2544B053ED8D56C5FA3B97D0B2EA4 /* Pods_AmazingPriceView_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					672485374C1BB68D20552F594CF861D9 = {
+						LastSwiftMigration = 1220;
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = E2AB79FE6C5C1FFDCCDFB2585E33A571 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE1DBAFE403EB06C1C9CD38DDD0B3809 /* AmazingPriceView */,
+				672485374C1BB68D20552F594CF861D9 /* Pods-AmazingPriceView_Example */,
+				EFE2C9B365253B5FF4A9AA9D7F088C3B /* Pods-AmazingPriceView_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CFC9DA4BEC376A857F506BA55BC6382 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CC8842EAD320A4CBD28B14B90C6983F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAC03C77E1647B9E103B136A99E72F4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B45C46CA66660726A6EFE44B9252C6AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67EBC1DDF836BA51FE3DFD62FD7ECBF9 /* Pods-AmazingPriceView_Example-dummy.m in Sources */,
+				02729389257106B400215AAA /* AmazingPriceAnimationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B61A551815265778CE8E01CD0846E890 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A38F1F59438053843C926564EAAEEC6 /* AmazingPriceView-dummy.m in Sources */,
+				02729388257106B400215AAA /* AmazingPriceAnimationView.swift in Sources */,
+				150C9B0224130CB9CF6D2EE15F67B919 /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3A821BDB14492AC3CA1A3DA825F4FB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				292C325E20F2AD1549350A997373FB18 /* Pods-AmazingPriceView_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36BF3D551A5F6E3DC88512880D055ACF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AmazingPriceView;
+			target = CE1DBAFE403EB06C1C9CD38DDD0B3809 /* AmazingPriceView */;
+			targetProxy = 92E81182178C79FC3F8BD19FBB799BF1 /* PBXContainerItemProxy */;
+		};
+		9D9A5CFA23EE34087D46326FCAB4BC5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-AmazingPriceView_Example";
+			target = 672485374C1BB68D20552F594CF861D9 /* Pods-AmazingPriceView_Example */;
+			targetProxy = 0A5D8DE8CFB1E6338384A057908F8BDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0AE38274CBB710A8E09B7BA27EB31AB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AC1849D18B4BE22FE8E1872540F61DA /* Pods-AmazingPriceView_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AmazingPriceView_Tests/Pods-AmazingPriceView_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AmazingPriceView_Tests/Pods-AmazingPriceView_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		62D1839F3DF7175560B0F1CD9E93A5E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D98A87EA5CBF89264A5AFF65C38E3AAF /* AmazingPriceView.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AmazingPriceView/AmazingPriceView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AmazingPriceView/AmazingPriceView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AmazingPriceView/AmazingPriceView.modulemap";
+				PRODUCT_MODULE_NAME = AmazingPriceView;
+				PRODUCT_NAME = AmazingPriceView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		71E966CBD03BD3B1EDB94E2562AA8EC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D8ACFD8CAF4E80BC72AAF021CC98299 /* Pods-AmazingPriceView_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AmazingPriceView_Example/Pods-AmazingPriceView_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AmazingPriceView_Example/Pods-AmazingPriceView_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7410BDFC373E69D9F3D86C6E2E8F7CFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04C9582ADD16B39B0D30F771DDFC4914 /* Pods-AmazingPriceView_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AmazingPriceView_Example/Pods-AmazingPriceView_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AmazingPriceView_Example/Pods-AmazingPriceView_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E1F0849C574415BBEC61DBD9554B877 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C12F31E77B841968DE8C1900FD7466A /* AmazingPriceView.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AmazingPriceView/AmazingPriceView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AmazingPriceView/AmazingPriceView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AmazingPriceView/AmazingPriceView.modulemap";
+				PRODUCT_MODULE_NAME = AmazingPriceView;
+				PRODUCT_NAME = AmazingPriceView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B0087CB4594321EF41619F3181FE120E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E183A6AA9F097A99822A857D6CB91367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAFE26CD28B96BADED0283E51DE09275 /* Pods-AmazingPriceView_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AmazingPriceView_Tests/Pods-AmazingPriceView_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AmazingPriceView_Tests/Pods-AmazingPriceView_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		415A7FDC161F44FF5ED913392FBF5031 /* Build configuration list for PBXNativeTarget "Pods-AmazingPriceView_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AE38274CBB710A8E09B7BA27EB31AB1 /* Debug */,
+				E183A6AA9F097A99822A857D6CB91367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
+				B0087CB4594321EF41619F3181FE120E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67312223DB69FD184AC57F7B6020A331 /* Build configuration list for PBXNativeTarget "Pods-AmazingPriceView_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71E966CBD03BD3B1EDB94E2562AA8EC8 /* Debug */,
+				7410BDFC373E69D9F3D86C6E2E8F7CFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BF3A25E8F71B8FA9F9A2C1FFDD36087 /* Build configuration list for PBXNativeTarget "AmazingPriceView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E1F0849C574415BBEC61DBD9554B877 /* Debug */,
+				62D1839F3DF7175560B0F1CD9E93A5E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "AmazingPriceView",
+  "version": "0.1.0",
+  "summary": "A short description of AmazingPriceView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/yoosa3004/AmazingPriceView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yoosa3004": "yoosa3004@deali.net"
+  },
+  "source": {
+    "git": "https://github.com/yoosa3004/AmazingPriceView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "AmazingPriceView/Classes/**/*"
+}

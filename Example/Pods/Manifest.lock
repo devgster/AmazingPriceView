@@ -1,0 +1,16 @@
+PODS:
+  - AmazingPriceView (0.1.0)
+
+DEPENDENCIES:
+  - AmazingPriceView (from `../`)
+
+EXTERNAL SOURCES:
+  AmazingPriceView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AmazingPriceView: 75d0899b6598e205179acce086d3f4fcfc4899b7
+
+PODFILE CHECKSUM: 61a568966c8c830c7fbe3a9c9f797bcbb9473e26
+
+COCOAPODS: 1.9.3

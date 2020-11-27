@@ -1,0 +1,6 @@
+framework module AmazingPriceView {
+  umbrella header "AmazingPriceView-umbrella.h"
+
+  export *
+  module * { export * }
+}
