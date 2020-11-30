@@ -42,8 +42,8 @@ open class AmazingPriceView: UIView {
     private var fontColor: UIColor = .black
     private var fontSize: CGFloat = 36.0
     
-    private var maximumPrice: Int = 0
-    private var minimumPrice: Int = 0
+    private(set) var maximumPrice: Int = 0
+    private(set) var minimumPrice: Int = 0
     
     private var maximumPricefontColor: UIColor = .systemPink
     
@@ -52,12 +52,6 @@ open class AmazingPriceView: UIView {
     private var shakeAnimationDuration = 0.30
     
     public var delegate: AmazingPriceViewDelegate? = nil
-    
-    public var price: Int {
-        get {
-            return self.currentPrice
-        }
-    }
     
     private var placeHolder = UILabel()
     
@@ -70,19 +64,19 @@ open class AmazingPriceView: UIView {
     private var numberLabelCount: Int = 0
     private var maximumFloatingPointNum: Int = 0
     
-    private var currentPrice: Int = 0 {
+    private(set) var price: Int = 0 {
         didSet {
-            self.isOverMinimum = (self.currentPrice >= self.minimumPrice)
+            self.isOverMinimum = (self.price >= self.minimumPrice)
             
-            if oldValue == 0 && self.currentPrice > 0 {
+            if oldValue == 0 && self.price > 0 {
                 self.setPlaceHolder(false)
-            } else if oldValue > 0 && self.currentPrice == 0 {
+            } else if oldValue > 0 && self.price == 0 {
                 self.setPlaceHolder(true)
             }
         }
     }
     
-    private var isOverMaximum: Bool = false {
+    private(set) var isOverMaximum: Bool = false {
         didSet {
             if oldValue == self.isOverMaximum { return }
             
@@ -98,7 +92,7 @@ open class AmazingPriceView: UIView {
         }
     }
 
-    private var isOverMinimum: Bool = false {
+    private(set) var isOverMinimum: Bool = false {
         didSet {
             if oldValue == self.isOverMinimum { return }
             
@@ -112,7 +106,7 @@ open class AmazingPriceView: UIView {
         super.init(frame: .zero)
     }
     
-    public init(_ font:UIFont, _ fontColor:UIColor, _ maximumPricefontColor:UIColor, _ fontSize:CGFloat, _ maximumPrice:Int = 0, _ minimumPrice:Int = 0, _ insertAnimationDuration:Double, _ deleteAnimationDuration:Double, _ shakeAnimationDuration: Double) {
+    public init(_ font:UIFont = .systemFont(ofSize: 36.0), _ fontColor:UIColor = .black, _ maximumPricefontColor:UIColor = .systemPink, _ fontSize:CGFloat = 36.0, _ maximumPrice:Int = 1000, _ minimumPrice:Int = 2000000, _ insertAnimationDuration:Double = 0.08, _ deleteAnimationDuration:Double = 0.10, _ shakeAnimationDuration: Double = 0.30) {
         super.init(frame: .zero)
         
         self.font = font
@@ -135,7 +129,7 @@ open class AmazingPriceView: UIView {
         initNumberViews()
     }
     
-    public func initPlaceHolder(_ text: String?, _ font: UIFont, _ fontColor: UIColor) {
+    public func initPlaceHolder(_ text: String?, _ font: UIFont = .systemFont(ofSize: 36.0), _ fontColor: UIColor = .black) {
         
         self.addSubview(self.placeHolder)
         self.placeHolder.text = text
@@ -187,22 +181,22 @@ open class AmazingPriceView: UIView {
     
     public func insertNumber(_ n: Int) {
         
-        if self.currentPrice == 0 && n == 0 { return }
+        if self.price == 0 && n == 0 { return }
         
-        if self.currentPrice == self.maximumPrice {
+        if self.price == self.maximumPrice {
             if self.isOverMaximum == true {
                 self.shake()
             } else {
                 self.isOverMaximum = true
             }
         } else {
-            let newPrice = self.currentPrice * 10 + n
+            let newPrice = self.price * 10 + n
             
             if newPrice > self.maximumPrice {
-                self.currentPrice = self.maximumPrice
+                self.price = self.maximumPrice
                 self.isOverMaximum = true
             } else {
-                self.currentPrice = newPrice
+                self.price = newPrice
                 self.insertNumberAnimation(n)
             }
         }
@@ -276,9 +270,9 @@ open class AmazingPriceView: UIView {
     
     public func deleteNumber() {
         
-        if self.currentPrice == 0 { return }
+        if self.price == 0 { return }
         
-        self.currentPrice = self.currentPrice / 10
+        self.price = self.price / 10
         
         self.isOverMaximum = false
         
@@ -327,9 +321,9 @@ open class AmazingPriceView: UIView {
     
     public func clear() {
         
-        if self.currentPrice == 0 { return }
+        if self.price == 0 { return }
         
-        self.currentPrice = 0
+        self.price = 0
         
         self.isOverMaximum = false
         

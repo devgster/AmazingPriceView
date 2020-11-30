@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		02729388257106B400215AAA /* AmazingPriceAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02729387257106B400215AAA /* AmazingPriceAnimationView.swift */; };
 		02729389257106B400215AAA /* AmazingPriceAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02729387257106B400215AAA /* AmazingPriceAnimationView.swift */; };
-		150C9B0224130CB9CF6D2EE15F67B919 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AF416E68C28BD1BE1D87DC541CEC02 /* ReplaceMe.swift */; };
 		292C325E20F2AD1549350A997373FB18 /* Pods-AmazingPriceView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A1BCD0B2A7F3299E4972CEC973F30 /* Pods-AmazingPriceView_Tests-dummy.m */; };
 		46B32F835A765CF7F495412030F1BFB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		49AEBCD3EEB4F2FF7FC03C4AFBEE2235 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -47,7 +46,6 @@
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		465C8415789B049F14610BCC83BF58BE /* Pods-AmazingPriceView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AmazingPriceView_Example-dummy.m"; sourceTree = "<group>"; };
 		477FE85AFF29BDB057F68870F31781F5 /* Pods-AmazingPriceView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AmazingPriceView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		57AF416E68C28BD1BE1D87DC541CEC02 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = AmazingPriceView/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		684FC5677A5A0B2BFD6E788F3A024905 /* AmazingPriceView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AmazingPriceView.modulemap; sourceTree = "<group>"; };
 		6B3EA0AAA1927E526DC638FCC83FB0AE /* Pods-AmazingPriceView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AmazingPriceView_Example-Info.plist"; sourceTree = "<group>"; };
 		79948BA6C020632E7EE4548A3FF0A924 /* Pods-AmazingPriceView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AmazingPriceView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 		D28F55480CD3FE62610783CAD6ED68C5 /* AmazingPriceView */ = {
 			isa = PBXGroup;
 			children = (
-				57AF416E68C28BD1BE1D87DC541CEC02 /* ReplaceMe.swift */,
 				AEC8DA33CBA9475638EA944D90CC6A45 /* Pod */,
 				34FF29317043BEFA3E323B9874CA2029 /* Support Files */,
 				02729387257106B400215AAA /* AmazingPriceAnimationView.swift */,
@@ -387,7 +384,6 @@
 			files = (
 				8A38F1F59438053843C926564EAAEEC6 /* AmazingPriceView-dummy.m in Sources */,
 				02729388257106B400215AAA /* AmazingPriceAnimationView.swift in Sources */,
-				150C9B0224130CB9CF6D2EE15F67B919 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
