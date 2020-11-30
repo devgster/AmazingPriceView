@@ -42,8 +42,8 @@ open class AmazingPriceView: UIView {
     private var fontColor: UIColor = .black
     private var fontSize: CGFloat = 36.0
     
-    private(set) var maximumPrice: Int = 1000
-    private(set) var minimumPrice: Int = 2000000
+    public private(set) var maximumPrice: Int = 1000
+    public private(set) var minimumPrice: Int = 2000000
     
     private var maximumPricefontColor: UIColor = .systemPink
     
@@ -64,7 +64,7 @@ open class AmazingPriceView: UIView {
     private var numberLabelCount: Int = 0
     private var maximumFloatingPointNum: Int = 0
     
-    private(set) var price: Int = 0 {
+    public private(set) var price: Int = 0 {
         didSet {
             self.isOverMinimum = (self.price >= self.minimumPrice)
             
@@ -76,7 +76,7 @@ open class AmazingPriceView: UIView {
         }
     }
     
-    private(set) var isOverMaximum: Bool = false {
+    public private(set) var isOverMaximum: Bool = false {
         didSet {
             if oldValue == self.isOverMaximum { return }
             
@@ -92,7 +92,7 @@ open class AmazingPriceView: UIView {
         }
     }
 
-    private(set) var isOverMinimum: Bool = false {
+    public private(set) var isOverMinimum: Bool = false {
         didSet {
             if oldValue == self.isOverMinimum { return }
             
