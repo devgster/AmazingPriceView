@@ -38,6 +38,8 @@ open class AmazingPriceView: UIView {
         }
     }
     
+    var testValue:Int = 0
+    
     private var font: UIFont = .systemFont(ofSize: 36.0)
     private var fontColor: UIColor = .black
     private var fontSize: CGFloat = 36.0
