@@ -42,8 +42,8 @@ open class AmazingPriceView: UIView {
     private var fontColor: UIColor = .black
     private var fontSize: CGFloat = 36.0
     
-    private(set) var maximumPrice: Int = 0
-    private(set) var minimumPrice: Int = 0
+    private(set) var maximumPrice: Int = 1000
+    private(set) var minimumPrice: Int = 2000000
     
     private var maximumPricefontColor: UIColor = .systemPink
     
