@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AmazingPriceView'
-  s.version          = '0.1.0'
+  s.version          = '0.3.0'
   s.summary          = 'It is a library with animation that comes down as the number is alpha-blended every time you enter a number.'
 
 # This description is used to generate tags and improve search results.
