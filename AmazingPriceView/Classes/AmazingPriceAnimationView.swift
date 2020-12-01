@@ -13,10 +13,10 @@ public protocol AmazingPriceViewDelegate {
     func IsPriceOverMinimumPrice(isOverMinimumPrice: Bool)
 }
 
-//public enum CurrencyViewOrder {
-//    case Front
-//    case Rear
-//}
+public enum NationalCurrencyInfo {
+    case US
+    case KOR
+}
 
 @available(iOS 10.0, *)
 open class AmazingPriceView: UIView {
@@ -38,8 +38,6 @@ open class AmazingPriceView: UIView {
         }
     }
     
-    var testValue:Int = 0
-    
     private var font: UIFont = .systemFont(ofSize: 36.0)
     private var fontColor: UIColor = .black
     private var fontSize: CGFloat = 36.0
@@ -57,10 +55,10 @@ open class AmazingPriceView: UIView {
     
     private var placeHolder = UILabel()
     
+    public private(set) var currencyInfo: NationalCurrencyInfo = .KOR
     private var currencyView: CurrencyView!
     private var currency: String = "원"
     private var floatingPoint: String = ","
-//    private var currencyViewOrder: CurrencyViewOrder = .Rear
     
     private let numberStackView = UIStackView()
     private var numberLabelCount: Int = 0
@@ -108,7 +106,7 @@ open class AmazingPriceView: UIView {
         super.init(frame: .zero)
     }
     
-    public init(_ font:UIFont = .systemFont(ofSize: 36.0), _ fontColor:UIColor = .black, _ maximumPricefontColor:UIColor = .systemPink, _ fontSize:CGFloat = 36.0, _ maximumPrice:Int = 1000, _ minimumPrice:Int = 2000000, _ insertAnimationDuration:Double = 0.08, _ deleteAnimationDuration:Double = 0.10, _ shakeAnimationDuration: Double = 0.30) {
+    public init(_ font:UIFont = .systemFont(ofSize: 36.0), _ fontColor:UIColor = .black, _ maximumPricefontColor:UIColor = .systemPink, _ fontSize:CGFloat = 36.0, _ maximumPrice:Int = 1000, _ minimumPrice:Int = 2000000, _ insertAnimationDuration:Double = 0.08, _ deleteAnimationDuration:Double = 0.10, _ shakeAnimationDuration: Double = 0.30, _ currecnyInfo: NationalCurrencyInfo = .KOR) {
         super.init(frame: .zero)
         
         self.font = font
@@ -124,23 +122,24 @@ open class AmazingPriceView: UIView {
         self.deleteAnimationDuration = deleteAnimationDuration
         self.shakeAnimationDuration = shakeAnimationDuration
         
-//        self.currencyViewOrder = order
-//        self.currency = currency
-//        self.floatingPoint = floatingPoint
+        self.currencyInfo = currecnyInfo
+        setCurrencyInfo()
         
         initNumberViews()
     }
     
     public func initPlaceHolder(_ text: String?, _ font: UIFont = .systemFont(ofSize: 36.0), _ fontColor: UIColor = .black) {
-        
+    
         self.addSubview(self.placeHolder)
         self.placeHolder.text = text
         self.placeHolder.font = font
         self.placeHolder.textColor = fontColor
         self.placeHolder.translatesAutoresizingMaskIntoConstraints = false
-        self.placeHolder.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        self.placeHolder.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        self.placeHolder.widthAnchor.constraint(equalToConstant: self.placeHolder.intrinsicContentSize.width + 0.5).isActive = true
         self.placeHolder.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.placeHolder.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        self.placeHolder.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        self.placeHolder.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
     }
     
     private func initNumberViews() {
@@ -152,6 +151,7 @@ open class AmazingPriceView: UIView {
         self.numberStackView.alignment = .center
         self.numberStackView.translatesAutoresizingMaskIntoConstraints = false
         self.numberStackView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        self.numberStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         self.numberStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         
         var maxPrice = self.maximumPrice
@@ -161,6 +161,12 @@ open class AmazingPriceView: UIView {
         }
         
         self.maximumFloatingPointNum = (self.numberLabelCount - 1) / 3
+        
+        self.currencyView = CurrencyView(text: self.currency, font: self.font, fontColor: self.fontColor)
+        
+        if self.currencyInfo == .US {
+            self.numberStackView.addArrangedSubview(self.currencyView)
+        }
         
         for _ in 1...self.numberLabelCount {
             let numberLabel = UILabel()
@@ -177,8 +183,9 @@ open class AmazingPriceView: UIView {
             self.numberStackView.addArrangedSubview(numberLabel)
         }
         
-        self.currencyView = CurrencyView(text: self.currency, font: self.font, fontColor: self.fontColor)
-        self.numberStackView.addArrangedSubview(self.currencyView)
+        if self.currencyInfo == .KOR {
+            self.numberStackView.addArrangedSubview(self.currencyView)
+        }
     }
     
     public func insertNumber(_ n: Int) {
@@ -379,15 +386,26 @@ open class AmazingPriceView: UIView {
         self.numberStackView.isHidden = isVisible
     }
     
-    func shake() {
+    private func shake() {
         let translation = CAKeyframeAnimation(keyPath: "transform.translation.x");
 
         translation.values = [-5, 5, -4, 4, -3, 3, -2, 2, 0]
         
         let shakeGroup: CAAnimationGroup = CAAnimationGroup()
         shakeGroup.animations = [translation]
-        shakeGroup.duration = shakeAnimationDuration
+        shakeGroup.duration = self.shakeAnimationDuration
         self.layer.add(shakeGroup, forKey: "shakeIt")
+    }
+    
+    private func setCurrencyInfo() {
+        switch self.currencyInfo {
+        case .KOR:
+            self.currency = "원"
+            self.floatingPoint = ","
+        case .US:
+            self.currency = "$"
+            self.floatingPoint = ","
+        }
     }
     
     required public init?(coder: NSCoder) {

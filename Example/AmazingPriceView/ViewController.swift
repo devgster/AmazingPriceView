@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testView = AmazingPriceView.init(.boldSystemFont(ofSize: 36.0), .black, .systemPink, 36.0, 2000000, 1000, 0.08, 0.10, 0.30)
+        testView = AmazingPriceView.init(.boldSystemFont(ofSize: 36.0), .black, .systemPink, 36.0, 2000000, 1000, 0.08, 0.10, 0.30, .KOR)
         testView?.initPlaceHolder("금액을 입력하세요", .boldSystemFont(ofSize: 36.0), .systemPink)
         testView?.delegate = self
         self.view.addSubview(testView!)
