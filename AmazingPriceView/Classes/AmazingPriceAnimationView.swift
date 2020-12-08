@@ -67,6 +67,11 @@ open class AmazingPriceView: UIView {
             self.placeHolderView.text = placeHolder
         }
     }
+    public var placeHolderColor: UIColor = .black {
+        didSet {
+            self.placeHolderView.textColor = self.placeHolderColor
+        }
+    }
     
     public private(set) var currencyInfo: NationalCurrencyInfo = .KOR
     private var currencyView: CurrencyView!
@@ -137,10 +142,10 @@ open class AmazingPriceView: UIView {
         self.addSubview(self.placeHolderView)
         self.placeHolderView.text = placeHolder
         self.placeHolderView.textAlignment = .center
-        self.placeHolderView.textColor = .lightGray
+        self.placeHolderView.textColor = self.placeHolderColor
         self.placeHolderView.font = font
         self.placeHolderView.font.withSize(fontSize)
-        self.placeHolderView.textColor = fontColor
+
         self.placeHolderView.translatesAutoresizingMaskIntoConstraints = false
         self.placeHolderView.widthAnchor.constraint(equalToConstant: self.placeHolderView.intrinsicContentSize.width + 0.5).isActive = true
         self.placeHolderView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
