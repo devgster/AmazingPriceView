@@ -23,8 +23,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testView = AmazingPriceView.init(.boldSystemFont(ofSize: 36.0), .black, .systemPink, 36.0, 2000000, 1000, 0.08, 0.10, 0.30, .KOR)
-        testView?.initPlaceHolder("금액을 입력하세요", .boldSystemFont(ofSize: 36.0), .systemPink)
+//        testView = AmazingPriceView.init(.boldSystemFont(ofSize: 36.0), .black, .systemPink, 36.0, 2000000, 1000, 0.08, 0.10, 0.30, .KOR)
+//        testView?.initPlaceHolder("금액을 입력하세요", .boldSystemFont(ofSize: 36.0), .systemPink)
+        testView = AmazingPriceView(font: .boldSystemFont(ofSize: 36.0), fontSize: 36.0, minimumPrice: 1000, maximumPrice: 20000000000)
+        testView?.fontColor = .black
+        testView?.maximumPricefontColor = .blue
+        testView?.placeHolder = "안녕하세요"
         testView?.delegate = self
         self.view.addSubview(testView!)
         testView?.translatesAutoresizingMaskIntoConstraints = false
@@ -104,10 +108,10 @@ class ViewController: UIViewController {
 
 @available(iOS 10.0, *)
 extension ViewController: AmazingPriceViewDelegate {
-    func IsPriceOverMaximumPrice(isOverMaximumPrice: Bool) {
+    func isPriceOverMaximumPrice(isOverMaximumPrice: Bool) {
     }
     
-    func IsPriceOverMinimumPrice(isOverMinimumPrice: Bool) {
+    func isPriceOverMinimumPrice(isOverMinimumPrice: Bool) {
     }
 }
 
