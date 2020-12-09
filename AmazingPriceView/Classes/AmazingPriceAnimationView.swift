@@ -73,6 +73,12 @@ open class AmazingPriceView: UIView {
         }
     }
     
+    public var placeHolderFont: UIFont = .systemFont(ofSize: 36.0) {
+        didSet {
+            self.placeHolderView.font = self.placeHolderFont
+        }
+    }
+    
     public private(set) var currencyInfo: NationalCurrencyInfo = .KOR
     private var currencyView: CurrencyView!
     private var currency: String = "원"
@@ -143,7 +149,7 @@ open class AmazingPriceView: UIView {
         self.placeHolderView.text = placeHolder
         self.placeHolderView.textAlignment = .center
         self.placeHolderView.textColor = self.placeHolderColor
-        self.placeHolderView.font = font
+        self.placeHolderView.font = placeHolderFont
         self.placeHolderView.font.withSize(fontSize)
 
         self.placeHolderView.translatesAutoresizingMaskIntoConstraints = false
