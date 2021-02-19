@@ -104,15 +104,13 @@ open class AmazingPriceView: UIView {
         didSet {
             if oldValue == self.isOverMaximum { return }
             
-            guard let delegate = self.delegate else { return }
-
-            delegate.isPriceOverMaximumPrice(isOverMaximumPrice: self.isOverMaximum)
-
             if self.isOverMaximum {
                 setMaximumPriceAnimation()
             } else {
                 restoreNumberViews()
             }
+            
+            self.delegate?.isPriceOverMaximumPrice(isOverMaximumPrice: self.isOverMaximum)
         }
     }
 
@@ -126,22 +124,35 @@ open class AmazingPriceView: UIView {
         }
     }
     
-    public init() {
+    @IBInspectable var numberFont: UIFont = .systemFont(ofSize: 36, weight: .bold)
+    @IBInspectable var maxPrice: Int = 2000000
+    @IBInspectable var minPrice: Int = 1000
+    
+//    public init() {
+//        super.init(frame: .zero)
+//    }
+    
+    public init(font: UIFont = .systemFont(ofSize: 36.0), minimumPrice: Int = 1000, maximumPrice: Int = 2000000) {
         super.init(frame: .zero)
+        
+        self.initLayout(font: font, minPrice: minimumPrice, maxPrice: maximumPrice)
     }
     
-    public init(font: UIFont = .systemFont(ofSize: 36.0), fontSize: CGFloat = 36.0, minimumPrice: Int = 1000, maximumPrice: Int = 2000000) {
-        super.init(frame: .zero)
-        
+    required public init?(coder: NSCoder) {
+        super.init(coder: coder)
+
+        self.initLayout(font: self.numberFont, minPrice: self.minPrice, maxPrice: self.maxPrice)
+    }
+    
+    private func initLayout(font: UIFont, minPrice: Int, maxPrice: Int) {
         self.font = font
-        self.font.withSize(fontSize)
-        
-        self.minimumPrice = minimumPrice
-        self.maximumPrice = maximumPrice
+        self.minimumPrice = minPrice
+        self.maximumPrice = maxPrice
         
         initNumberViews()
         initPlaceHolder()
     }
+    
     
     private func initPlaceHolder() {
         
@@ -156,8 +167,8 @@ open class AmazingPriceView: UIView {
         self.placeHolderView.widthAnchor.constraint(equalToConstant: self.placeHolderView.intrinsicContentSize.width + 0.5).isActive = true
         self.placeHolderView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         self.placeHolderView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        self.placeHolderView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        self.placeHolderView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+//        self.placeHolderView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+//        self.placeHolderView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         self.placeHolderView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     
@@ -272,6 +283,17 @@ open class AmazingPriceView: UIView {
         })
     }
     
+    public func deleteNumber() {
+        
+        if self.price == 0 { return }
+        
+        self.price = self.price / 10
+        
+        self.isOverMaximum = false
+        
+        self.deleteNumberAnimation()
+    }
+    
     private func deleteNumberAnimation() {
         
         self.removeFloatingPoint()
@@ -306,17 +328,6 @@ open class AmazingPriceView: UIView {
             
             numberView.transform = CGAffineTransform(translationX: 0.0, y: 0.0)
         })
-    }
-    
-    public func deleteNumber() {
-        
-        if self.price == 0 { return }
-        
-        self.price = self.price / 10
-        
-        self.isOverMaximum = false
-        
-        self.deleteNumberAnimation()
     }
     
     private func setMaximumPriceAnimation() {
@@ -445,9 +456,5 @@ open class AmazingPriceView: UIView {
             self.currency = "$"
             self.floatingPoint = ","
         }
-    }
-    
-    required public init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
