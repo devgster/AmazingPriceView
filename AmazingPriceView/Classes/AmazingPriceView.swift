@@ -11,6 +11,7 @@ import UIKit
 public protocol AmazingPriceViewDelegate {
     func isPriceOverMaximumPrice(isOverMaximumPrice: Bool)
     func isPriceOverMinimumPrice(isOverMinimumPrice: Bool)
+    func priceChanged(price: Int)
 }
 
 public enum NationalCurrencyInfo {
@@ -97,6 +98,10 @@ open class AmazingPriceView: UIView {
             } else if oldValue > 0 && self.price == 0 {
                 self.setPlaceHolder(true)
             }
+            
+            if oldValue != self.price {
+                self.delegate?.priceChanged(price: self.price)
+            }
         }
     }
     
@@ -127,10 +132,6 @@ open class AmazingPriceView: UIView {
     @IBInspectable var numberFont: UIFont = .systemFont(ofSize: 36, weight: .bold)
     @IBInspectable var maxPrice: Int = 2000000
     @IBInspectable var minPrice: Int = 1000
-    
-//    public init() {
-//        super.init(frame: .zero)
-//    }
     
     public init(font: UIFont = .systemFont(ofSize: 36.0), minimumPrice: Int = 1000, maximumPrice: Int = 2000000) {
         super.init(frame: .zero)
@@ -167,8 +168,6 @@ open class AmazingPriceView: UIView {
         self.placeHolderView.widthAnchor.constraint(equalToConstant: self.placeHolderView.intrinsicContentSize.width + 0.5).isActive = true
         self.placeHolderView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         self.placeHolderView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-//        self.placeHolderView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-//        self.placeHolderView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         self.placeHolderView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     

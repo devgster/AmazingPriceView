@@ -52,9 +52,6 @@ class ViewController: UIViewController {
         self.priceView.maximumPricefontColor = .systemPink
     }
     
-    func layoutPriceView() {
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,9 +60,57 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    private func writePriceInKorean(_ price: Int) -> String {
+        // WRITE PRICE IN KOREAN CHARACTERS
+        if price == 0 {
+            self.priceLabel.text = ""
+            return ""
+        }
+        
+        var priceText = " 원"
+        var value = price
+        
+        let prefix: [String] = ["", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"]
+        let suffix: [String] = ["", "십", "백", "천"]
+        let suffix2: [String] = ["", "만"]
+        
+        var index2 = 0
+        
+        while value > 0 {
+            
+            var priceTextTemp = ""
+            for index in 0 ..< 4 {
+                if value == 0 { break }
+                
+                let end = value % 10
+                
+                if end == 1 && index == 0 && index2 == 0 {
+                    priceTextTemp = "일"
+                } else if end == 1 {
+                    priceTextTemp = suffix[index] + priceTextTemp
+                } else if end != 0 {
+                    priceTextTemp = prefix[end] + suffix[index] + priceTextTemp
+                }
+                
+                value = value / 10
+            }
+            
+            priceText = priceTextTemp + suffix2[index2] + priceText
+            
+            index2 += 1
+        }
+        
+        return priceText
+    }
 }
 
 extension ViewController: AmazingPriceViewDelegate {
+    
+    func priceChanged(price: Int) {
+        self.priceLabel.text = self.writePriceInKorean(price)
+    }
+    
     func isPriceOverMaximumPrice(isOverMaximumPrice: Bool) {
         
         if isOverMaximumPrice {
@@ -73,7 +118,6 @@ extension ViewController: AmazingPriceViewDelegate {
         } else {
             self.infoLabel.text = "Less than MAX"
         }
-        print("isPriceOverMaximumPrice: \(isOverMaximumPrice)")
     }
     
     func isPriceOverMinimumPrice(isOverMinimumPrice: Bool) {
@@ -82,7 +126,6 @@ extension ViewController: AmazingPriceViewDelegate {
         } else {
             self.infoLabel.text = "Less than MIN!"
         }
-        print("isPriceOverMinimumPrice: \(isOverMinimumPrice)")
     }
 }
 
