@@ -13,8 +13,6 @@ import AmazingPriceView
 @available(iOS 10.0, *)
 class ViewController: UIViewController {
     
-    private let HORIZONTAL_MARGIN: CGFloat = 32.0
-    
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var priceView: AmazingPriceView!
     @IBOutlet weak var keypadCollectionView: UICollectionView!
@@ -167,7 +165,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (UIScreen.main.bounds.width-self.HORIZONTAL_MARGIN)/3, height: KeypadCell.HEIGHT)
+        return KeypadCell.size(screenMargin: self.view.layoutMargins.left + self.view.layoutMargins.right)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

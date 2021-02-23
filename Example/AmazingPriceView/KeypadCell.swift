@@ -12,7 +12,9 @@ class KeypadCell: UICollectionViewCell {
     
     @IBOutlet weak var keyLabel: UILabel!
     
-    static let HEIGHT: CGFloat = 50
+    class func size(screenMargin: CGFloat) -> CGSize {
+        return CGSize(width: round((UIScreen.main.bounds.width - screenMargin - 1)/3), height: 50.0)
+    }
     
     enum KEY : Int {
         case delete = -1
