@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02729388257106B400215AAA /* AmazingPriceAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02729387257106B400215AAA /* AmazingPriceAnimationView.swift */; };
-		02729389257106B400215AAA /* AmazingPriceAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02729387257106B400215AAA /* AmazingPriceAnimationView.swift */; };
+		02729388257106B400215AAA /* AmazingPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02729387257106B400215AAA /* AmazingPriceView.swift */; };
+		02729389257106B400215AAA /* AmazingPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02729387257106B400215AAA /* AmazingPriceView.swift */; };
 		292C325E20F2AD1549350A997373FB18 /* Pods-AmazingPriceView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A1BCD0B2A7F3299E4972CEC973F30 /* Pods-AmazingPriceView_Tests-dummy.m */; };
 		46B32F835A765CF7F495412030F1BFB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		49AEBCD3EEB4F2FF7FC03C4AFBEE2235 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02729387257106B400215AAA /* AmazingPriceAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AmazingPriceAnimationView.swift; path = AmazingPriceView/Classes/AmazingPriceAnimationView.swift; sourceTree = "<group>"; };
+		02729387257106B400215AAA /* AmazingPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AmazingPriceView.swift; path = AmazingPriceView/Classes/AmazingPriceView.swift; sourceTree = "<group>"; };
 		04C9582ADD16B39B0D30F771DDFC4914 /* Pods-AmazingPriceView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AmazingPriceView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		07412F66BBA9C5A8EB637C2AB21F5228 /* AmazingPriceView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AmazingPriceView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A84D4E9F3CB1620FDBB2D2043B500E8 /* Pods-AmazingPriceView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AmazingPriceView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 			children = (
 				AEC8DA33CBA9475638EA944D90CC6A45 /* Pod */,
 				34FF29317043BEFA3E323B9874CA2029 /* Support Files */,
-				02729387257106B400215AAA /* AmazingPriceAnimationView.swift */,
+				02729387257106B400215AAA /* AmazingPriceView.swift */,
 			);
 			name = AmazingPriceView;
 			path = ../..;
@@ -374,7 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67EBC1DDF836BA51FE3DFD62FD7ECBF9 /* Pods-AmazingPriceView_Example-dummy.m in Sources */,
-				02729389257106B400215AAA /* AmazingPriceAnimationView.swift in Sources */,
+				02729389257106B400215AAA /* AmazingPriceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A38F1F59438053843C926564EAAEEC6 /* AmazingPriceView-dummy.m in Sources */,
-				02729388257106B400215AAA /* AmazingPriceAnimationView.swift in Sources */,
+				02729388257106B400215AAA /* AmazingPriceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
