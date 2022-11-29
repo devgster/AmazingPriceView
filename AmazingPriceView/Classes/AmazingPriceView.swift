@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public protocol AmazingPriceViewDelegate {
+public protocol AmazingPriceViewDelegate: AnyObject {
     func isPriceOverMaximumPrice(isOverMaximumPrice: Bool)
     func isPriceOverMinimumPrice(isOverMinimumPrice: Bool)
     func priceChanged(price: Int)
@@ -60,7 +60,7 @@ open class AmazingPriceView: UIView {
     public private(set) var maximumPrice: Int = 1000
     public private(set) var minimumPrice: Int = 2000000
     
-    public var delegate: AmazingPriceViewDelegate?
+    public weak var delegate: AmazingPriceViewDelegate?
     
     private var placeHolderView = UILabel()
     public var placeHolder: String? = "금액을 입력해주세요" {
@@ -256,28 +256,28 @@ open class AmazingPriceView: UIView {
         numberView.text = "\(num)"
         numberView.transform = CGAffineTransform(translationX: 0, y: -40)
         
-        UIView.animate(withDuration: self.insertAnimationDuration, delay: 0.0, options: .curveLinear, animations: { [weak self] in
+        UIView.animate(withDuration: self.insertAnimationDuration, delay: 0.0, options: .curveLinear, animations: { [weak self, weak numberView] in
             
-            guard let s = self else { return }
+            guard let self = self, let numberView = numberView else { return }
             
-            s.currencyView.isHidden = false
+            self.currencyView.isHidden = false
             
             numberView.isHidden = false
             
-            s.addFloatingPoint()
+            self.addFloatingPoint()
             
         }, completion: { [weak self] _ in
             
-            guard let s = self else { return }
+            guard let self = self else { return }
             
-            UIView.animate(withDuration: s.insertAnimationDuration, delay: 0.0, options: .curveLinear, animations:{ [weak self] in
+            UIView.animate(withDuration: self.insertAnimationDuration, delay: 0.0, options: .curveLinear, animations:{ [weak self, weak numberView] in
                 
-                guard let s = self else { return }
+                guard let self = self, let numberView = numberView else { return }
                 
                 numberView.transform = CGAffineTransform(translationX: 0, y: 0)
                 numberView.alpha = 1.0
                 
-                s.currencyView.alpha = 1.0
+                self.currencyView.alpha = 1.0
             })
         })
     }
@@ -306,9 +306,9 @@ open class AmazingPriceView: UIView {
         
         guard let numberView = self.numberStackView.arrangedSubviews[digitNum] as? UILabel else { return }
         
-        UIView.animate(withDuration: self.deleteAnimationDuration, delay: 0.0, options: .curveLinear, animations: { [weak self] in
+        UIView.animate(withDuration: self.deleteAnimationDuration, delay: 0.0, options: .curveLinear, animations: { [weak self, weak numberView] in
             
-            guard let s = self else { return }
+            guard let self = self, let numberView = numberView else { return }
             
             numberView.transform = (digitNum != 0) ? CGAffineTransform(translationX: -(numberView.frame.width/2), y: -20) : CGAffineTransform(translationX: -(numberView.frame.width), y: -20)
             
@@ -317,13 +317,14 @@ open class AmazingPriceView: UIView {
             numberView.isHidden = true
             
             if digitNum == 0 {
-                s.currencyView.alpha = 0.0
-                s.currencyView.isHidden = true
+                self.currencyView.alpha = 0.0
+                self.currencyView.isHidden = true
             }
 
-            s.addFloatingPoint()
+            self.addFloatingPoint()
             
-        }, completion: { _ in
+        }, completion: { [weak numberView] _ in
+            guard let numberView = numberView else { return }
             
             numberView.transform = CGAffineTransform(translationX: 0.0, y: 0.0)
         })
@@ -337,36 +338,38 @@ open class AmazingPriceView: UIView {
         
         lastNumberView.transform = CGAffineTransform(translationX: 0, y: -40)
         
-        UIView.animate(withDuration: self.insertAnimationDuration, delay: 0.0, options: .curveLinear, animations: { [weak self] in
+        UIView.animate(withDuration: self.insertAnimationDuration, delay: 0.0, options: .curveLinear, animations: { [weak self, weak lastNumberView] in
             
-            guard let s = self else { return }
+            guard let self = self, let lastNumberView = lastNumberView else { return }
             
-            let maximumDigits = String(describing: s.maximumPrice).compactMap { String($0) }
+            let maximumDigits = String(describing: self.maximumPrice).compactMap { String($0) }
             
-            for (idx, view) in s.numberStackView.arrangedSubviews.enumerated() {
+            for (idx, view) in self.numberStackView.arrangedSubviews.enumerated() {
                 guard let view = view as? UILabel else { return }
                 
-                if idx < s.numberStackView.arrangedSubviews.endIndex-1 && idx < maximumDigits.count {
+                if idx < self.numberStackView.arrangedSubviews.endIndex-1 && idx < maximumDigits.count {
                     view.text = maximumDigits[idx]
                 }
                 
-                view.textColor = s.maximumPricefontColor
+                view.textColor = self.maximumPricefontColor
             }
             
             lastNumberView.isHidden = false
             
-            s.addFloatingPoint()
+            self.addFloatingPoint()
             
         }, completion: { [weak self] _ in
             
-            guard let s = self else { return }
+            guard let self = self else { return }
             
-            UIView.animate(withDuration: s.insertAnimationDuration, delay: 0.0, options: .curveLinear, animations: {
+            UIView.animate(withDuration: self.insertAnimationDuration, delay: 0.0, options: .curveLinear, animations: { [weak self, weak lastNumberView] in
+                
+                guard let self = self, let lastNumberView = lastNumberView else { return }
                 
                 lastNumberView.transform = CGAffineTransform(translationX: 0.0, y: 0.0)
                 lastNumberView.alpha = 1.0
                 
-                s.shakeAnimation()
+                self.shakeAnimation()
             })
         })
     }
